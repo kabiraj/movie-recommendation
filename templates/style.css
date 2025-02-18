@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Recommendations</title>
-    <style>
+
         body {
             font-family: Arial, sans-serif;
             text-align: center;
@@ -52,24 +46,3 @@
             background: #333;
             border-radius: 5px;
         }
-    </style>
-</head>
-<body>
-    <h1>Recommendations for "{{ movie_name }}"</h1>
-
-    <div class="grid-container">
-        {% for movie in recommendations %}
-            <div class="movie-card">
-                {% if movie.poster_url %}
-                    <img src="{{ movie.poster_url }}" alt="{{ movie.title }}">
-                {% else %}
-                    <p>No Image Available</p>
-                {% endif %}
-                <p class="movie-title">{{ movie.title }}</p>
-            </div>
-        {% endfor %}
-    </div>
-
-    <a class="back-button" href="/">Go Back</a>
-</body>
-</html>
